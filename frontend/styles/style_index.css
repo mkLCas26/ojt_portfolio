@@ -18,7 +18,7 @@
     --green: #6CCA76;  
     --yellow: #F1D95C;
     --purple: #6A00BA;
-    --bg_grid: #B3B3B3;
+    --bg_grid: rgba(179, 179, 179, 0.4);
     --red_guide: #FA6B6A;
 }
 
@@ -26,34 +26,36 @@ body {
     font-family: 'Fredoka', sans-serif;
     margin: 0;
     padding: 0;
-
-    /* --- for stacked coded background lines --- */
     background-color: #ffffff;
-    background-image: 
-        linear-gradient(90deg, transparent 49px, var(--red_guide) 1px, transparent 50px),
-        linear-gradient(90deg, transparent calc(100% - 51px), var(--red_guide) 1px, transparent calc(100% - 50px)),
-
-        linear-gradient(var(--bg_grid) 1px, transparent 1px),
-        linear-gradient(90deg, var(--bg_grid) 1px, transparent 1px);
-
-    background-size: 
-        100% 100%, 100% 100%, 
-        30px 30px, 30px 30px;
-
-    background-attachment: fixed;
 }
 
+/* --- for layering background grid (red parallel lines on top) --- */
+body::before,
+body::after {
+    content: "";
+    position: fixed;
+    top: 0; bottom: 0;
+    width: 1px;
+    z-index: 9999;
+    pointer-events: none;
+    background-color: var(--red_guide);
+}
+
+body::before { left: 50px }
+body::after { right: 50px }
+
+
+/* --- FOR NAVBAR --- */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+    z-index: 10;
     
-    margin: 0 auto;
-    max-width: 100%;
     padding: 10px 80px;
     background: #ffffff;
-  
-    border-bottom: 1px solid var(--blue);
+    border-bottom: 2px solid var(--blue);
 }
 
 .navbar_logo img {
@@ -94,3 +96,16 @@ body {
     transform: scale(1.05);
 }
 
+/* --- FOR HERO --- */
+.hero_container {
+    background-image: 
+        linear-gradient(var(--bg_grid) 1px, transparent 1px),
+        linear-gradient(90deg, var(--bg_grid) 1px, transparent 1px);
+    
+    background-size: 30px 30px;;
+    margin-left: 50px;
+    margin-right: 55px;
+
+    min-height: calc(100vh - 115px);
+    padding: 60px 30px;
+}
