@@ -1,4 +1,18 @@
-/* --- Global Styles --- */
+/* --- GLOBAL RESET --- */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* html {
+    height: 100%;
+    overflow: hidden;
+} */
+
+/* --- GLOBAL STYLES --- */
 :root {
     --blue: #113E89;
     --green: #6CCA76;  
@@ -19,5 +33,14 @@ body {
     background-size: 30px 30px;
 }
 
+.navbar {
+    display: flex;
+    background: #ffffff;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+}
 
+.navlinks {
 
+}
