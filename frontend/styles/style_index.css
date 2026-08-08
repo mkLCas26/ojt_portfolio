@@ -7,6 +7,15 @@
     box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    filter: brightness(1.2);
+}
+
 /* html {
     height: 100%;
     overflow: hidden;
@@ -181,9 +190,15 @@ body::after { right: 50px }
     font-weight: 600;
 }
 
-.purple_txt {
-    color: var(--purple);
+.purple_txt,
+.purple_txt:visited {
+    color: var(--purple) !important;
     font-weight: 550;
+    text-decoration: underline;
+}
+
+.purple_txt:hover {
+    color: var(--blue);
 }
 
 /* --- SOCIAL LINKS --- */
@@ -200,6 +215,19 @@ body::after { right: 50px }
     font-size: 0.95rem;
     font-weight: 500;
     gap: 12px;
+}
+
+.soclinks_items a,
+.soclinks_items a:visited{
+    color: var(--blue);
+    transition: color 0.2s ease;
+    text-decoration: none;
+}
+
+.soclinks_items a:hover,
+.purple_txt:hover {
+    color: var(--purple);
+    text-decoration: underline;
 }
 
 .soclinks_items img {
