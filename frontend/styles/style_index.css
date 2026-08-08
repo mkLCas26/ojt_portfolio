@@ -16,7 +16,8 @@
 :root {
     --black: #222222;
     --blue: #113E89;
-    --green: #6CCA76;  
+    --green: #2F8E0C; 
+    --green_menu: #6CCA76; 
     --yellow: #F1D95C;
     --purple: #6A00BA;
     --bg_grid: rgba(179, 179, 179, 0.4);
@@ -89,7 +90,7 @@ body::after { right: 50px }
     white-space: nowrap;
 }
 
-.navlinks a:nth-child(1) { background-color: var(--green); }
+.navlinks a:nth-child(1) { background-color: var(--green_menu); }
 .navlinks a:nth-child(2) { background-color: var(--blue); }
 .navlinks a:nth-child(3) { background-color: var(--blue); }
 
@@ -161,6 +162,17 @@ body::after { right: 50px }
 .intro_desc {
     margin-bottom: 30px;
     line-height: 1.5;
+}
+
+.green_txt {
+    color: var(--green);
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.purple_txt {
+    color: var(--purple);
+    font-weight: 550;
 }
 
 /* --- SOCIAL LINKS --- */
