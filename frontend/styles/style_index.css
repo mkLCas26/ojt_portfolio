@@ -109,3 +109,13 @@ body::after { right: 50px }
     min-height: calc(100vh - 115px);
     padding: 60px 30px;
 }
+
+.hero_content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 50px;
+}
+
