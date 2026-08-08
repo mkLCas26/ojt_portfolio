@@ -235,3 +235,39 @@ body::after { right: 50px }
     height: 34px;
     object-fit: contain;
 }
+
+/* --- PROGRESS BAR --- */
+.progbag_container {
+    margin-top: 20px;
+    width: 683px;
+    max-width: 600px;
+    height: 75px;
+    border: 1px solid #222;
+    border-radius: 23px;
+    
+    background-color: rgba(233, 229, 212, 0.2);
+    box-shadow: 0 4px 4px 0 rgba(0, 0 ,0, 0.25);
+    overflow: hidden;
+    position: relative;
+}
+
+.progbar {
+    display: flex;
+    align-items: center;
+    padding: 0 25px;
+    height: 75px;
+    width: 342px;
+
+    border-radius: 18px;
+    border-right: 1px solid #222;
+    background-color: var(--yellow);
+    box-shadow: 0 4px 4px 0 rgba(0, 0 ,0, 0.25);
+    transition: width 1s ease-in-out;
+}
+
+.progbar span {
+    color: var(--blue);
+    white-space: nowrap;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
