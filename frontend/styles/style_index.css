@@ -164,3 +164,23 @@ body::after { right: 50px }
 }
 
 /* --- SOCIAL LINKS --- */
+.soclinks_grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.soclinks_items {
+    display: flex;
+    align-items: center;
+    font-size: 0.95rem;
+    font-weight: 500;
+    gap: 12px;
+}
+
+.soclinks_items img {
+    width: 34px;
+    height: 34px;
+    object-fit: contain;
+}
