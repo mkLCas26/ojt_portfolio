@@ -142,14 +142,25 @@ body::after { right: 50px }
     line-height: 1;
     font-weight: 800;
     margin-top: 40px;
-    margin-bottom: 20px;
 
     background: linear-gradient(to right, #9BC0FE, #113E89 50%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
-    filter: drop-shadow(0px 2px 4px rgba(125, 165, 232, 0.5));
+    filter: drop-shadow(0px 2px 4px rgba(125, 165, 232, 1));
+    display: flex;
+    flex-direction: column;
+}
+
+.home_text h1::after {
+    content: "";
+    display: block;
+    width: 200px;
+    height: 6px;
+    background: linear-gradient(to right, #9BC0FE, #113E89 50%);
+    border-radius: 10px;
+    margin-bottom: 20px;
 }
 
 .home_text p  {
