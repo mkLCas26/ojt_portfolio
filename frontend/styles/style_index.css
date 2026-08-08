@@ -119,3 +119,28 @@ body::after { right: 50px }
     gap: 50px;
 }
 
+.prof_collage {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+
+.prof_collage img {
+    height: auto;
+    width: 500px;
+}
+
+.home_text {
+    flex: 1.2;
+}
+
+.home_text h1 {
+    font-size: 6rem;
+    line-height: 1;
+    font-weight: 800;
+    margin-top: 40px;
+    margin-bottom: 20px;
+
+
+}
+
