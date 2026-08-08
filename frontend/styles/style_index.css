@@ -14,6 +14,7 @@
 
 /* --- GLOBAL STYLES --- */
 :root {
+    --black: #222222;
     --blue: #113E89;
     --green: #6CCA76;  
     --yellow: #F1D95C;
@@ -141,6 +142,23 @@ body::after { right: 50px }
     margin-top: 40px;
     margin-bottom: 20px;
 
+    background: linear-gradient(to right, #9BC0FE, #113E89 50%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 
+    filter: drop-shadow(0px 2px 4px rgba(125, 165, 232, 0.5));
+}
+
+.home_text p  {
+    font: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 18px;
+    color: var(--black)
+}
+
+.intro_desc {
+    margin-bottom: 30px;
+    line-height: 1.5;
 }
 
