@@ -139,3 +139,17 @@ document
         folderPanel.classList.remove("active");
     });
 
+// opening document
+function openDocument(file) {
+    doucmentTitle.textContent = file.name;
+    previewLink.href = file.file;
+    downloadLink.href = file.file;
+    documentPanel.classList.add("active");
+}
+
+// closing document
+document 
+    .getElementById("closeDocument")
+    .addEventListener("click", () => {
+        documentPanel.classList.remove("active");
+    });
