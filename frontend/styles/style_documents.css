@@ -255,7 +255,7 @@ body::after { right: 55px }
         visibility 0.3s ease;
 }
 
-.folder_panel:active {
+.folder_panel.active {
     opacity: 1;
     visibility: visible;
 }
@@ -279,7 +279,7 @@ body::after { right: 55px }
     transition: transform 0.35s ease;
 }
 
-.folder_panel:active .inner_panel {
+.folder_panel.active .inner_panel {
     transform: 
         translateY(0)
         scale(1);
@@ -322,7 +322,7 @@ body::after { right: 55px }
     cursor: pointer;
 
     padding: 5px 8px;
-    transition: transform 0.2s ease color 0.2s ease;
+    transition: transform 0.2s ease, color 0.2s ease;
 }
 
 .document_item:hover {
@@ -379,7 +379,7 @@ body::after { right: 55px }
         visibility 0.3s ease;
 }
 
-.document_panel:active {
+.document_panel.active {
     opacity: 1;
     visibility: visible;
 }
@@ -441,7 +441,7 @@ body::after { right: 55px }
 }
 
 .docu_preview > .close_btn:hover {
-    transform: translateX(-50%) scale(1.05s);
+    transform: translateX(-50%) scale(1.05);
 }
 
 /* --- PDF VIEWER --- */
@@ -461,7 +461,7 @@ body::after { right: 55px }
     transition: opacity 0.3s ease visibility 0.3s ease;
 }
 
-.pdf_viewer:active {
+.pdf_viewer.active {
     opacity: 1;
     visibility: visible;
 }

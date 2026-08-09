@@ -73,6 +73,7 @@ const documents = {
     }
 };
 
+
 // folder panel elements
 const folderPanel =
     document.getElementById("folderPanel");
@@ -83,11 +84,13 @@ const folderTitle =
 const documentList =
     document.getElementById("documentList");
 
+
 const documentPanel =
     document.getElementById("documentPanel");
 
 const doucmentTitle =
     document.getElementById("documentTitle");
+
 
 const previewLink =
     document.getElementById("previewLink");
@@ -95,26 +98,35 @@ const previewLink =
 const downloadLink =
     document.getElementById("downloadLink");
 
+
 const pdfViewer =
     document.getElementById("pdfViewer");
 
 const pdfFrame =
     document.getElementById("pdfFrame");
 
+
 // opening folder
 const folders = document.querySelectorAll(".folder_card");
 folders.forEach(folder => {
     folder.addEventListener("click", () => {
-        const folderID = folder.dataset;
+        const folderID = folder.dataset.folder;
         openFolder(folderID);
     });
 });
 
 function openFolder(folderID) {
     const folder = documents[folderID];
+
+    if (!folder) {
+        console.error("Folder not found: ", folderID);
+        return;
+    }
+
     folderTitle.textContent = folder.title;
 
-    documentList.innerHTML = "";    // clear past docus
+    // clear past docus
+    documentList.innerHTML = ""; 
 
     // for creating docu buttons
     folder.files.forEach(file => {
@@ -143,7 +155,10 @@ document
 function openDocument(file) {
     doucmentTitle.textContent = file.name;
     previewLink.href = file.file;
+
     downloadLink.href = file.file;
+    downloadLink.download = file.name + ".pdf";
+
     documentPanel.classList.add("active");
 }
 
