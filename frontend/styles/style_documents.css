@@ -404,7 +404,45 @@ body::after { right: 55px }
     margin-bottom: 35px;
 }
 
+/* --- PDF ICON AREA --- */
+.pdf_icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+}
 
+.pdf_icon img {
+    width: 90px;
+    height: auto;
+}
+
+.docu_actions {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.docu_actions a {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--blue);
+}
+
+.docu_actions a:hover {
+    color: var(--purple);
+}
+
+.docu_preview > .close_btn {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.docu_preview > .close_btn:hover {
+    transform: translateX(-50%) scale(1.05s);
+}
 
 /* --- FOR FOOTER --- */
 .main_footer {
