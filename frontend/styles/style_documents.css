@@ -146,7 +146,7 @@ body::after { right: 55px }
     font-weight: 800;
     line-height: 1;
 
-    background: linear-gradient(to right, #9BC0FE, #113E89 55%);
+    background: linear-gradient(to right, #9BC0FE, #113E89 50%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -167,6 +167,71 @@ body::after { right: 55px }
 .docu_header p {
     font-size: 0.95rem;
     font-weight: 500;
+}
+
+/* --- FOLDER SECTION --- */
+.folder_section {
+    max-width: 1000px;
+    min-height: 470px;
+    margin: 40px auto 0;
+    gap: 80px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* --- FOLDER BUTTONS --- */
+.folder_card {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    position: relative;
+
+    width: 390px;
+    transition: 
+        transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1),
+        filter 0.35s ease;
+}
+
+.folder_card:focus {
+    outline: none;
+}
+
+.folder_card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    
+    filter: drop-shadow(0px 12px 10px rgba(0, 0, 0, 0.18));
+    transition: filter 0.35s ease;
+}
+
+/* --- POSITIONING --- */
+.f_predeployment {
+    transform: rotate(-4deg);
+}
+
+.f_evaluation {
+    transform: rotate(5deg);
+}
+
+.f_predeployment:hover {
+    transform:
+        translateY(-15px)
+        rotate(-7deg);
+        scale: 1.03;
+}
+
+.f_evaluation:hover {
+    transform:
+        translateY(-15px)
+        rotate(-7deg);
+        scale: 1.03;
+}
+
+.folder_card:hover img {
+    filter: drop-shadow(0px 18px 15px rgba(0,0,0,0.25));
 }
 
 /* --- FOR FOOTER --- */
