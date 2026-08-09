@@ -153,3 +153,19 @@ document
     .addEventListener("click", () => {
         documentPanel.classList.remove("active");
     });
+
+// opening pdf preview
+previewLink.addEventListener("click", (event) => {
+    event.preventDefault();
+
+    pdfFrame.src = previewLink.href;
+    pdfViewer.classList.add("active");
+});
+
+// closing pdf preview
+document
+    .getElementById("closePdf")
+    .addEventListener("click", () => {
+        pdfViewer.classList.remove("active");
+        pdfFrame.src = "";
+    });
