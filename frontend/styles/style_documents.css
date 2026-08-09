@@ -359,6 +359,53 @@ body::after { right: 55px }
     left: 25px;
 }
 
+/* --- DOCUMENT SECTIONS --- */
+.document_panel {
+    position: fixed;
+    inset: 0;
+    z-index: 200;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(17, 62, 137, 0.15);
+    backdrop-filter: blur(5px);
+
+    opacity: 0;
+    visibility: hidden;
+    transition: 
+        opacity 0.3s ease
+        visibility 0.3s ease;
+}
+
+.document_panel:active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.docu_preview {
+    width: 450px;
+    min-height: 520px;
+    padding: 35px;
+
+    background: #F5F5E9;
+    border: 4px solid #222;
+    border-radius: 15px;
+    position: relative;
+
+    box-shadow: 10px 12px 0 rgba(0, 0, 0, 0.15);
+}
+
+.docu_preview h2 {
+    font-size: 1.5rem;
+    text-align: center;
+    color: #222;
+    margin-bottom: 35px;
+}
+
+
+
 /* --- FOR FOOTER --- */
 .main_footer {
     margin-left: 50px;
