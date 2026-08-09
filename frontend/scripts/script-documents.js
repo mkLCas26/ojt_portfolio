@@ -73,3 +73,30 @@ const documents = {
     }
 };
 
+// folder panel elements
+const folderPanel =
+    document.getElementById("folderPanel");
+
+const folderTitle =
+    document.getElementById("folderTitle");
+
+const documentList =
+    document.getElementById("documentList");
+
+const documentPanel =
+    document.getElementById("documentPanel");
+
+const doucmentTitle =
+    document.getElementById("documentTitle");
+
+const previewLink =
+    document.getElementById("previewLink");
+
+const downloadLink =
+    document.getElementById("downloadLink");
+
+const pdfViewer =
+    document.getElementById("pdfViewer");
+
+const pdfFrame =
+    document.getElementById("pdfFrame");
