@@ -52,30 +52,31 @@
         <section class="folder_section" id="folderSection">
 
             <!--======    pre-deployment   ======-->
-            <button class="folder_card f_predeployment" data-folder="predeployment">
+            <button class="folder_card f_predeployment" data-folder="predeployment" type="button">
                 <img src="../assets/folder_imgs/predep_folder.png" alt="Pre-deployment folder">
             </button>
 
             <!--======    evaluation   ======-->
-            <button class="folder_card f_evaluation" data-folder="evaluation">
+            <button class="folder_card f_evaluation" data-folder="evaluation" type="button">
                 <img src="../assets/folder_imgs/eval_folder.png" alt="Evaluation folder">
             </button>
         </section>
 
         <!--======    FOLDER CONTENT PANEL   ======-->
         <section class="folder_panel" id="folderPanel">
-            <div class="inner_panel">
-                <button class="close_btn" id="closeFolder">ⓧ   Close</button>
+            <div class="folder_stage">
+                <img src="../assets/folder_imgs/predep_folder.png" id="activeFolderImg" class="active_folder_img" alt="Selected Folder">
 
-                <h2 id="folderTitle">PRE-DEPLOYMENT</h2>
                 <div class="document_list" id="documentList"></div>
+
+                <button class="close_btn" id="closeFolder">ⓧ   Close</button>
             </div>
         </section>
 
         <!--======    DOCU PREVIEW   ======-->
         <section class="document_panel" id="documentPanel">
-            <div class="docu_preview">
-                <button class="close_btn" id="closeDocument">ⓧ   Close</button>
+            <div class="document_stage">
+                <img src="../assets/folder_imgs/paperbg.png" class="document_paper" alt="Document preview">
 
                 <h2 id="documentTitle">Curriculum Vitae</h2>
                 <div class="pdf_icon">
@@ -83,9 +84,11 @@
 
                     <div class="docu_actions">
                         <a href="#" id="previewLink" target="_blank">➥   Preview</a>
-                        <a href="#" id="downloadLink" target="_blank">➥   Download</a>
+                        <a href="#" id="downloadLink">➥   Download</a>
                     </div>
-                </div>    
+                </div>  
+                
+                <button class="close_btn" id="closeDocument">ⓧ   Close</button>
             </div>
         </section>
 
