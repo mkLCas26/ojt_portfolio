@@ -81,6 +81,9 @@ const folderPanel =
 const folderTitle =
     document.getElementById("folderTitle");
 
+const activeFolderImage =
+    document.getElementById("activeFolderImage")
+
 const documentList =
     document.getElementById("documentList");
 
@@ -88,7 +91,7 @@ const documentList =
 const documentPanel =
     document.getElementById("documentPanel");
 
-const doucmentTitle =
+const documentTitle =
     document.getElementById("documentTitle");
 
 
@@ -111,6 +114,10 @@ const folders = document.querySelectorAll(".folder_card");
 folders.forEach(folder => {
     folder.addEventListener("click", () => {
         const folderID = folder.dataset.folder;
+
+        const folderImage = folder.querySelector("img").src;
+        activeFolderImage.src = folderImage;
+
         openFolder(folderID);
     });
 });
@@ -149,24 +156,25 @@ document
     .getElementById("closeFolder")
     .addEventListener("click",  () => {
         folderPanel.classList.remove("active");
+        folderPanel.classList.remove("document-open");
     });
 
 // opening document
 function openDocument(file) {
-    doucmentTitle.textContent = file.name;
+    documentTitle.textContent = file.name;
     previewLink.href = file.file;
 
     downloadLink.href = file.file;
     downloadLink.download = file.name + ".pdf";
 
-    documentPanel.classList.add("active");
+    documentPanel.classList.add("document-open");
 }
 
 // closing document
 document 
     .getElementById("closeDocument")
     .addEventListener("click", () => {
-        documentPanel.classList.remove("active");
+        folderPanel.classList.remove("document-open");
     });
 
 // opening pdf preview
