@@ -421,7 +421,22 @@ body::after { right: 55px }
 }
 
 /* --- FOLDER MOVEMENTS --- */
+.folder_panel.document-open .folder_stage {
+    transform: translateX(-250px) translateY(0);
+}
 
+.folder_panel.document-open .active_folder_img {
+    transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.folder_panel.document-open + .document_panel {
+    pointer-events: auto;
+}
+
+.folder_panel.document-open + .document_panel .document_stage {
+    transform: translateX(250px);
+    opacity: 1;
+}
 
 /* --- PDF VIEWER --- */
 .pdf_viewer {
