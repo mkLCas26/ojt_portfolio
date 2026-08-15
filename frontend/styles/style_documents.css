@@ -410,7 +410,7 @@ body:has(.pdf_viewer.active)::after { display: none; }
     top: 140px;
     z-index: 5;
 
-    font-size: 2.8rem;
+    font-size: 2rem;
     font-weight: 700;
     color: #222;
     text-align: center;
