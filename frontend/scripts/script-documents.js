@@ -78,9 +78,6 @@ const documents = {
 const folderPanel =
     document.getElementById("folderPanel");
 
-const folderTitle =
-    document.getElementById("folderTitle");
-
 const activeFolderImage =
     document.getElementById("activeFolderImage")
 
@@ -130,8 +127,6 @@ function openFolder(folderID) {
         return;
     }
 
-    folderTitle.textContent = folder.title;
-
     // clear past docus
     documentList.innerHTML = ""; 
 
@@ -167,7 +162,7 @@ function openDocument(file) {
     downloadLink.href = file.file;
     downloadLink.download = file.name + ".pdf";
 
-    documentPanel.classList.add("document-open");
+    folderPanel.classList.add("document-open");
 }
 
 // closing document
