@@ -65,6 +65,13 @@ body::after {
 body::before { left: 50px }
 body::after { right: 55px }
 
+body:has(.folder_panel.active)::before,
+body:has(.folder_panel.active)::after,
+body:has(.document_panel.document-open)::before,
+body:has(.document_panel.document-open)::after,
+body:has(.pdf_viewer.active)::before,
+body:has(.pdf_viewer.active)::after { display: none; }
+
 
 /* --- FOR NAVBAR --- */
 .navbar {
@@ -375,8 +382,8 @@ body::after { right: 55px }
 
 .document_stage > .close_btn {
     position: absolute;
-    bottom: 15px;
-    left: 50%;
+    bottom: 30px;
+    left: 45%;
     z-index: 20;
     transform: translateX(-50%);
 }
@@ -386,21 +393,24 @@ body::after { right: 55px }
 }
 
 .document_paper {
-    width: 450px;
-    height: auto;
+    position: relative;
+    width: auto;
+    height: 500px;
     z-index: 1;
     left: 0;
-    top: 0;
+    top: 10px;
+    
     pointer-events: none;
 }
 
 .document_stage h2 {
+    position: absolute;
     width: 100%;
-    left: 0;
-    top: 65px;
+    right: 25px;
+    top: 140px;
     z-index: 5;
 
-    font-size: 1.5rem;
+    font-size: 2.8rem;
     font-weight: 700;
     color: #222;
     text-align: center;
@@ -411,7 +421,7 @@ body::after { right: 55px }
 .document_stage .pdf_icon {
     position: absolute;
     left: 100px;
-    top: 170px;
+    top: 300px;
     z-index: 5;
 
     display: flex;
@@ -427,7 +437,7 @@ body::after { right: 55px }
 .docu_actions {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 25px;
 }
 
 .docu_actions a {
@@ -438,8 +448,9 @@ body::after { right: 55px }
     transition: color 0.2s ease, transform 0.2s ease;
 }
 
-.docu_actions:hover {
-    transform: translateX(-50%) scale(1.05);
+.docu_actions a:hover {
+    transform: translateX(5px);
+    color: var(--purple);
 }
 
 /* --- FOLDER MOVEMENTS --- */
