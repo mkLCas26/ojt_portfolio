@@ -251,7 +251,7 @@ body::after { right: 55px }
     opacity: 0;
     visibility: hidden;
     transition: 
-        opacity 0.3s ease
+        opacity 0.3s ease,
         visibility 0.3s ease;
 }
 
@@ -260,54 +260,41 @@ body::after { right: 55px }
     visibility: visible;
 }
 
-.inner_panel {
-    width: 500px;
-    min-height: 430px;
-    padding: 34px 35px 30px;
+.folder_stage {
+    width: 400px;
+    height: 500px;
     position: relative;
-    background: #F9DD75;
-    border-radius: 12px;
+    z-index: 10;
 
-    box-shadow:
-        8px 10px 0px rgba(255,255,255,0.8),
-        0 15px 35px rgba(0,0,0,0.25);
-
-    transform:
-        translateY(30px)
-        scale(0.95);
-
-    transition: transform 0.35s ease;
+    transform: translateY(30px) rotate(0deg);
+    transition: transfrom 0.45s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
-.folder_panel.active .inner_panel {
-    transform: 
-        translateY(0)
-        scale(1);
-}
-
-/* --- FOLDER TITLES (decide if will retain this style)--- */
-.inner_panel h2 {
-    color: #C83C2D;
-    font-size: 1.8rem;
-    margin-bottom: 25px;
-
-    writing-mode: vertical-rl;
+.active_folder_img {
+    width: 500px;
+    height: auto;
     position: absolute;
-    left: 20px;
-    top: 60px;
-    padding: 12px 8px;
+    left: 50%;
+    top: 50%;
+    pointer-events: none;
 
-    border: 3px double #E30000;
-    font-family: Georgia, serif;
-    letter-spacing: 2px;
+    transform: translate(-50%, -50%) rotate(90deg);
+    transform-origin: center;
+    filter: drop-shadow(0px 12px 10px rgba(0, 0, 0, 0.18));
+    transition: transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 /* --- DOCU LIST --- */
 .document_list {
-    margin-left: 90px;
+    width: 260px;
+    position: absolute;
+    top: 65px;
+    left: 125px;
+    z-index: 5;
+
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 7px;
 }
 
 .document_item {
@@ -351,12 +338,6 @@ body::after { right: 55px }
 
 .close_btn:hover {
     transform: translateX(3px);
-}
-
-.inner_panel > .close_btn {
-    position: absolute;
-    bottom: 20px;
-    left: 25px;
 }
 
 /* --- DOCUMENT SECTIONS --- */
