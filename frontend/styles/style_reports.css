@@ -257,7 +257,7 @@ body:has(.pdf_viewer.active)::after { display: none; }
     z-index: 10;
 
     transform: translateY(30px) rotate(0deg);
-    transition: transfrom 0.45s cubic-bezier(0.2, 0.8, 0.2, 1);
+    transition: transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 .folder_stage > .close_btn {
