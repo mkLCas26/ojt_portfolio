@@ -64,11 +64,11 @@ const reportList =
     document.getElementById("reportList");
 
 
-const documentPanel =
-    document.getElementById("documentPanel");
+const reportPanel =
+    document.getElementById("reportPanel");
 
-const documentTitle =
-    document.getElementById("documentTitle");
+const reportTitle =
+    document.getElementById("reportTitle");
 
 
 const previewLink =
@@ -112,7 +112,7 @@ function openFolder(folderID) {
     // for creating docu buttons
     folder.files.forEach(file => {
         const button = document.createElement("button");
-        button.classList.add("document_item");
+        button.classList.add("report_item");
         button.textContent = file.name;
 
         button.addEventListener("click", () => {
@@ -130,25 +130,25 @@ document
     .getElementById("closeFolder")
     .addEventListener("click",  () => {
         folderPanel.classList.remove("active");
-        folderPanel.classList.remove("document-open");
+        folderPanel.classList.remove("report-open");
     });
 
 // opening document
 function openDocument(file) {
-    documentTitle.textContent = file.name;
+    reportTitle.textContent = file.name;
     previewLink.href = file.file;
 
     downloadLink.href = file.file;
     downloadLink.download = file.name + ".pdf";
 
-    folderPanel.classList.add("document-open");
+    folderPanel.classList.add("report-open");
 }
 
 // closing document
 document 
     .getElementById("closeDocument")
     .addEventListener("click", () => {
-        folderPanel.classList.remove("document-open");
+        folderPanel.classList.remove("report-open");
     });
 
 // opening pdf preview
