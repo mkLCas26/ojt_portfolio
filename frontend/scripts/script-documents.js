@@ -6,7 +6,7 @@ const documents = {
         files: [
             {
                 name: "Curriculum Vitae",
-                file: "../assets/documents/ojt-requirements.pdf"
+                file: "../assets/documents/Ma. Kristina L. Cas - CV.pdf"
             }, 
 
             {
@@ -16,37 +16,37 @@ const documents = {
 
             {
                 name: "Memorandum of Agreement",
-                file: "../assets/documents/ojt-requirements.pdf"
+                file: "../assets/documents/NTC MOA.pdf"
             },
 
             {
                 name: "Letter of Intent",
-                file: "../assets/documents/ojt-requirements.pdf"
+                file: "../assets/documents/Letter of Intent.pdf"
             },
 
             {
                 name: "Letter of Endorsement",
-                file: "../assets/documents/ojt-requirements.pdf"
+                file: "../assets/documents/Letter of Endorsement.pdf"
             },
 
             {
                 name: "Student Waiver",
-                file: "../assets/documents/ojt-requirements.pdf"
+                file: "../assets/documents/Student Waiver.pdf"
             },
 
             {
                 name: "Consent Form",
-                file: "../assets/documents/ojt-requirements.pdf"
+                file: "../assets/documents/Consent Form.pdf"
             },
 
             {
                 name: "Medical Certificate",
-                file: "../assets/documents/ojt-requirements.pdf"
+                file: "../assets/documents/Medical Certificate.pdf"
             },
 
             {
                 name: "Insurance",
-                file: "../assets/documents/ojt-requirements.pdf"
+                file: "../assets/documents/MoneeInsure Insurance.pdf"
             }
         ]
     },
