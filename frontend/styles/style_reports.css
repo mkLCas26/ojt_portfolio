@@ -149,7 +149,7 @@ body:has(.pdf_viewer.active)::after { display: none; }
 }
 
 .reports_header h1 {
-    font-size: 5rem;
+    font-size: 6rem;
     font-weight: 800;
     line-height: 1.2;
 
