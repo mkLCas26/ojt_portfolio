@@ -6,17 +6,17 @@ const reports = {
         files: [
             {
                 name: "Week 1",
-                file: "../assets/documents/ojt-requirements.pdf"
+                file: "../assets/reports/CAS_WeekRep1.pdf"
             }, 
 
             {
                 name: "Week 2",
-                file: "../assets/documents/ojt-requirements.pdf"
+                file: "../assets/reports/CAS_WeekRep2.pdf"
             },
 
             {
                 name: "Week 3",
-                file: "../assets/documents/ojt-requirements.pdf"
+                file: "../assets/reports/CAS_WeekRep3.pdf"
             },
 
             {
