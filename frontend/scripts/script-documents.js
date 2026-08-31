@@ -11,7 +11,7 @@ const documents = {
 
             {
                 name: "Approval Sheet",
-                file: "../assets/documents/ojt-requirements.pdf"
+                file: "../assets/documents/Cas - Approval Sheet.pdf"
             },
 
             {
