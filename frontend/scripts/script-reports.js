@@ -21,32 +21,32 @@ const reports = {
 
             {
                 name: "Week 4",
-                file: "../assets/documents/CAS_Week4.pdf"
+                file: "../assets/reports/CAS_Week4.pdf"
             },
 
             {
                 name: "Week 5",
-                file: "../assets/documents/CAS_Week5.pdf"
+                file: "../assets/reports/CAS_Week5.pdf"
             },
 
             {
                 name: "Week 6",
-                file: "../assets/documents/CAS_Week6.pdf"
+                file: "../assets/reports/CAS_Week6.pdf"
             },
 
             {
                 name: "Week 7",
-                file: "../assets/documents/CAS_Week7.pdf"
+                file: "../assets/reports/CAS_Week7.pdf"
             },
 
             {
                 name: "Week 8",
-                file: "../assets/documents/CAS_Week8.pdf"
+                file: "../assets/reports/CAS_Week8.pdf"
             },
 
             {
                 name: "Week 9",
-                file: "../assets/documents/CAS_Week9.pdf"
+                file: "../assets/reports/CAS_Week9.pdf"
             }
         ]
     },
