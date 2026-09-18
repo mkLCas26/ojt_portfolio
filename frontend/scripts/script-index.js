@@ -1,6 +1,6 @@
 // for progress bar animation
 window.addEventListener("load", function() {
-    let completedHours = 187;  
+    let completedHours = 300;
     let totalHours = 300;
     let percentage = (completedHours / totalHours) * 100;
 
